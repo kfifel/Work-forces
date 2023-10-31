@@ -11,5 +11,8 @@
     <bean id="employee1" class="com.youcode.workforces.entities.Employee"/>
     <bean id="department1" class="com.youcode.workforces.entities.Department" scope="prototype"/>
 
+    <bean id="employeeService" class="com.youcode.workforces.service.EmployeeService">
+        <constructor-arg index="0" ref="employee1" />
+    </bean>
 </beans>
 
