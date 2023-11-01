@@ -1,22 +1,30 @@
 package com.youcode.workforces.service;
 
 import com.youcode.workforces.entities.Employee;
+import com.youcode.workforces.repository.EmployeeRepository;
 
 import java.util.List;
 
 public class EmployeeService {
     private final Employee employee;
+    private EmployeeRepository employeeRepository;
 
-    public EmployeeService(Employee employee) {
+    public EmployeeService(Employee employee, EmployeeRepository employeeRepository) {
         this.employee = employee;
+        this.employeeRepository = employeeRepository;
+    }
+
+
+    public List<Employee> findEmployeeBySalaryGreaterThan(Double a){
+        return employeeRepository.findEmployeeBySalaryGreaterThan(a);
     }
 
     public List<Employee> findAll() {
-        return null;
+        return (List<Employee>) employeeRepository.findAll();
     }
 
     public Employee save(Employee employee) {
-        return null;
+        return employeeRepository.save(employee);
     }
 
     public Employee update(Employee employee) {
