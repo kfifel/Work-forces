@@ -5,8 +5,9 @@
         xsi:schemaLocation="http://www.springframework.org/schema/beans
            https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <import resource="jpa-config.xml"/>
-    <import resource="services.xml"/>
+
+    <bean id="departmentService" class="com.youcode.workforces.service.impl.DepartmentServiceImpl"/>
+    <bean id="employeeService" class="com.youcode.workforces.service.impl.EmployeeServiceImpl"/>
 
 </beans>
 

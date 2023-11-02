@@ -1,18 +1,17 @@
 package com.youcode.workforces.entities;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@Builder
 @Entity
 public class Employee {
     @Id
@@ -22,4 +21,6 @@ public class Employee {
     private LocalDateTime createdAt;
     private Double salary;
 
+    @ManyToOne
+    private Department department;
 }
