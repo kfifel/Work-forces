@@ -60,4 +60,10 @@
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Repository" />
     </context:component-scan>
 
+    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="targetObject">
+            <bean class="org.slf4j.bridge.SLF4JBridgeHandler" />
+        </property>
+        <property name="targetMethod" value="install" />
+    </bean>
 </beans>
