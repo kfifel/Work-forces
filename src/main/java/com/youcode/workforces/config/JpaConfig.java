@@ -13,18 +13,4 @@ import java.util.Objects;
 
 
 public class JpaConfig {
-    private final Environment environment;
-
-    public JpaConfig(Environment environment) {
-        this.environment = environment;
-    }
-
-    public DataSource dataSource() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setUrl(environment.getProperty("spring.datasource.url"));
-        dataSource.setUsername(environment.getProperty("spring.datasource.username"));
-        dataSource.setPassword(environment.getProperty("spring.datasource.password"));
-        dataSource.setDriverClassName(Objects.requireNonNull(environment.getProperty("spring.datasource.hikari.driver-class-name")));
-        return dataSource;
-    }
 }

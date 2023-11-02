@@ -26,9 +26,10 @@ public class WorkForcesApplication {
 
       // System.out.println(repository.findAll());
 
-        repository.save(new Employee(null, "karim", LocalDateTime.now(), 12032D));
+        //repository.save(new Employee(null, "karim", LocalDateTime.now(), 12032D));
 
-        employeeService.findEmployeeBySalaryGreaterThan(1000D).forEach(System.out::println);
+
+        repository.findEmployeeBySalaryGreaterThanAndSalaryLessThan(1_000D, 12_001D).forEach(System.out::println);
 
         System.out.println(dataSource);
     }

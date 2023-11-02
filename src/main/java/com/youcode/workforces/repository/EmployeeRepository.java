@@ -9,4 +9,5 @@ import java.util.List;
 public interface EmployeeRepository  extends CrudRepository<Employee, Long> {
 
     public List<Employee> findEmployeeBySalaryGreaterThan(Double a);
+    public List<Employee> findEmployeeBySalaryGreaterThanAndSalaryLessThan(Double a, Double c);
 }

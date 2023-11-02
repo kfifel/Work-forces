@@ -6,11 +6,9 @@ import com.youcode.workforces.repository.EmployeeRepository;
 import java.util.List;
 
 public class EmployeeService {
-    private final Employee employee;
     private EmployeeRepository employeeRepository;
 
-    public EmployeeService(Employee employee, EmployeeRepository employeeRepository) {
-        this.employee = employee;
+    public EmployeeService(EmployeeRepository employeeRepository) {
         this.employeeRepository = employeeRepository;
     }
 
