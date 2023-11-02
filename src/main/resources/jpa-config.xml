@@ -66,4 +66,6 @@
         </property>
         <property name="targetMethod" value="install" />
     </bean>
+
+
 </beans>
