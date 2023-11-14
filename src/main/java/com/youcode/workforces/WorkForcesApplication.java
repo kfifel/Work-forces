@@ -2,13 +2,11 @@ package com.youcode.workforces;
 
 import com.youcode.workforces.entities.Department;
 import com.youcode.workforces.entities.Employee;
-import com.youcode.workforces.repository.EmployeeRepository;
 import com.youcode.workforces.service.DepartmentService;
 import com.youcode.workforces.service.EmployeeService;
 import com.youcode.workforces.service.impl.DepartmentServiceImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import java.time.LocalDateTime;
 
@@ -28,6 +26,9 @@ public class WorkForcesApplication {
 
         System.out.println("finding all employee: ======================================================");
         employeeService.findAll().forEach(System.out::println);
+
+
+        System.out.println("is employee with id 4l exist: " + employeeService.isExistById(4L));
 
     }
 

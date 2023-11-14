@@ -14,4 +14,6 @@ public interface EmployeeService {
     Employee update(Employee employee);
 
     void delete(Employee employee);
+
+    boolean isExistById(Long id);
 }

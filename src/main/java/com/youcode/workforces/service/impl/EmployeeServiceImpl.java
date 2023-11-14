@@ -42,6 +42,10 @@ public class EmployeeServiceImpl implements EmployeeService {
         return result;
     }
 
+    public boolean isExistById(Long id) {
+        return employeeRepository.existsById(id);
+    }
+
     @Override
     public Employee update(Employee employee) {
         return null;
